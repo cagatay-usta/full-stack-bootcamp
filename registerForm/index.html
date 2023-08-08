@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="register-form">
+      <h2>Register</h2>
+      <p>Fill out this form</p>
+      <div class="name-container">
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          class="form-input"
+          placeholder="First Name"
+          aria-label="first name"
+        />
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          class="form-input"
+          placeholder="Last Name"
+          aria-label="last name"
+        />
+      </div>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        class="form-input"
+        placeholder="Username"
+        aria-label="username"
+      />
+      <input
+        type="text"
+        name="email-address"
+        id="email-address"
+        class="form-input"
+        placeholder="E-mail Address"
+        aria-label="email-address"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="form-input"
+        placeholder="Password"
+        aria-label="password"
+      />
+      <div class="terms-container">
+        <input
+          type="checkbox"
+          name="terms"
+          id="terms"
+          class="form-terms"
+          aria-label="terms and conditions"
+        />
+        <span class="terms-text"
+          >I agree with the <strong>Terms and Conditions</strong> and the
+          <strong>Privacy Policy</strong></span
+        >
+      </div>
+      <button type="submit" id="form-submit-button">Create Account</button>
+    </form>
+  </body>
+</html>
