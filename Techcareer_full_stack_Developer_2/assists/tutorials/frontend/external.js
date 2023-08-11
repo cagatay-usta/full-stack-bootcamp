@@ -12,7 +12,7 @@ Formül: (derece*9/5)+32
 */
 
 let celsius = Number(prompt("derece giriniz"));
-console.log((celsius * 9 / 5) + 32);
+console.log((celsius * 9) / 5 + 32);
 
 //Örnek-3
 // y=3x+4k ==>1.dereceden 2 bilinmeyenli denklem algoritması
@@ -21,7 +21,6 @@ console.log((celsius * 9 / 5) + 32);
 let x = Number(prompt("x degerini giriniz"));
 let k = Number(prompt("k degerini giriniz"));
 console.log(x * 3 + 4 * k);
-
 
 // örnek-4 operatör işlemleri: aşağıdaki örneği javascript ile yapalım
 // 4+3*2(3:3-1*6+9:1+(3:3))
@@ -62,3 +61,56 @@ let secondPassword = prompt("tekrar sifre giriniz");
 firstPassword === secondPassword
   ? console.log("sifre dogru")
   : console.log("sifre yanlis");
+
+// SORU 1<=userData<=50
+// 1 ile Kullanıcı tarafından alınan bitiş sayısına kadar toplama yapan Algoritma örneği
+// Örnek: 1<=user 1+2+3+...userdatası
+const addNumbers = (n) => {
+  let total = 0;
+  for (let i = 1; i < n; i++) {
+    total += i;
+  }
+  return total;
+};
+// Eğer Bu sayılardan 7 sayıyı varsa bunu toplayama dahil etmesin (continue)
+const addNumbers7 = (n) => {
+  let total = 0;
+  for (let i = 1; i < n; i++) {
+    if (i == 7) continue;
+    total += i;
+  }
+  return total;
+};
+// Bu sayının en fazla 50'e kadar toplama yapabilir (break)
+const addNumbers50 = (n) => {
+  let total = 0;
+  for (let i = 1; i < n; i++) {
+    if (i >= 50) break;
+    total += i;
+  }
+  return total;
+};
+// bu sayılardan çift olanların kaç tane, sayıların kendisi ve toplamları nedir ?
+const addNumbersEven = (n) => {
+  let total = 0;
+  const even = [];
+  for (let i = 1; i < n; i++) {
+    if (i % 2 != 0) continue;
+    total += i;
+    even.push(i);
+  }
+  return [total, even.length, even];
+};
+// bu sayılardan tek olanların kaç tane, sayıların kendisi ve toplamları nedir ?
+// secret-Key kullanıcı eğer 44 girerse hiç bir işlem yapmadan sistemden çıkış sağlansın onunda haricinde sürekli işlem yapsın
+// Dikkat: Bu algoritmayı Arrow Function ile yapalım.
+// (Clean code kuralları çercevesinde ) algoritma yapan program ?
+
+///////////////////////////////////////////////////////////////////////////////
+// ÖDEV
+// kullanıcıdan aldığımız isim soyisim (boşluk var)
+// ilk karakter göstersin sonraki kelimeleri masking (maskeleme yapsın)
+// eğer kullanıcı isim ve soyisimi ilk karakteri küçük girmişse büyük olsun mutlaka
+// Hamit Mızrak
+// H**** MIZ***
+// ipucu: charAt, substring, indexOf, döngü, karar mekanizma
